@@ -1,5 +1,5 @@
-" colorscheme: Base4Tone_retro by Bram de Haan
-" author: Bram de Haan - https://github.com/atelierbram/Base4Tone
+" colorscheme: Base4Tone_Modern_W by Bram de Haan
+" author: Bram de Haan - https://github.com/atelierbram/Base4Tone-vim
 " https://github.com/atelierbram/Base4Tone-vim/blob/master/colors/Base4Tone_Modern_W_Light.vim
 
 " Theme setup 
@@ -8,7 +8,7 @@ hi clear
 if exists("syntax_on") 
   syntax reset 
 endif 
-let g:colors_name = "Base4Tone_retro_Light" 
+let g:colors_name = "Base4Tone_Modern_W_Light" 
 
 " https://stackoverflow.com/questions/2211477/how-can-i-use-variables-to-dry-up-vim-colorthemes 
 " https://stackoverflow.com/questions/4396647/how-to-write-a-vim-color-scheme 

@@ -1,5 +1,5 @@
 " colorscheme: Base4Tone_Classic_B by Bram de Haan
-" author: Bram de Haan - https://github.com/atelierbram/Base4Tone
+" author: Bram de Haan - https://github.com/atelierbram/Base4Tone-vim
 " https://github.com/atelierbram/Base4Tone-vim/blob/master/colors/Base4Tone_Classic_B_Light.vim
 
 " Theme setup 
