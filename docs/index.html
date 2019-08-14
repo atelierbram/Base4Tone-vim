@@ -1,31 +1,188 @@
 <!doctype html>
-<html class="no-js core no-flexbox" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Base4Tone Vim</title>
-    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Base4Tone for Vim"/>
-<script>// if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) { document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; }</script>
-<script>if ( 'querySelector' in document && 'addEventListener' in window && Array.prototype.forEach ) { document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js '; }function featureDetect(){"use strict";"querySelector"in document&&"addEventListener"in window&&Array.prototype.forEach&&(document.documentElement.className=document.documentElement.className.replace(/\bcore\b/g,"")+" enhanced ");var a=document.body||document.documentElement,a=a.style;(""==a.webkitFlexWrap||""==a.msFlexWrap||""==a.flexWrap)&&(document.documentElement.className=document.documentElement.className.replace(/\bno-flexbox\b/g,"")+" flexbox ")}function supportsSVG(){"use strict";return!!document.createElementNS&&!!document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect}function addLoadEvent(a){var b=window.onload;"function"!=typeof window.onload?window.onload=a:window.onload=function(){b(),a()}}featureDetect(),supportsSVG()?document.documentElement.className+=" svg":document.documentElement.className+=" no-svg",supportsSVG(),addLoadEvent(function(){var a=document.documentElement;a.className=a.className+" is-loaded"});</script>
-
+<link rel="preload" href="https://atelierbram.github.io/Base4Tone-prism/assets/css/prism_b4t_Modern-N-dark.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://atelierbram.github.io/Base4Tone-prism/assets/css/prism_b4t_Modern-N-dark.min.css"></noscript>
+<script>(function(w){if(!w.loadCSS)w.loadCSS=function(){};var rp=loadCSS.relpreload={};rp.support=function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}}();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){if(link.addEventListener)link.removeEventListener("load",enableStylesheet);else if(link.attachEvent)link.detachEvent("onload",enableStylesheet);link.setAttribute("onload",null);
+link.media=finalMedia}if(link.addEventListener)link.addEventListener("load",enableStylesheet);else if(link.attachEvent)link.attachEvent("onload",enableStylesheet);setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3E3)};rp.poly=function(){if(rp.support())return;var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",
+true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener)w.addEventListener("load",function(){rp.poly();w.clearInterval(run)});else if(w.attachEvent)w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}if(typeof exports!=="undefined")exports.loadCSS=loadCSS;else w.loadCSS=loadCSS})(typeof global!=="undefined"?global:this);</script>
+<style> *, *::before, *::after { box-sizing: inherit; } ::before, ::after { text-decoration: inherit; vertical-align: inherit; } * { font-family: inherit; line-height: inherit; color: inherit; } body, pre code, ul code, .no-bullets { margin: 0; padding: 0; } html { font-family: sans-serif; font-size: 16px; } html, body { height: 100%; background-color: #fff; } body { font: 100%/1.5 AvenirNext-Regular, -apple-system, BlinkMacSystemFont, "Segoe UI",Corbel, "Lucida Grande", "Trebuchet Ms", sans-serif; color: #111; min-height: 100%; box-sizing: border-box; } h1, h2, h3, p, pre, figure, details { margin: 3rem 0 0; } header, footer { text-align: center; } a { background: transparent; color: #4183c4; text-decoration: none; transition: .3s all; } a:active, a:hover { outline: 0; } a:hover, a:focus, a:active { text-decoration: underline; } b, strong { font-weight: bold; } img { border: 0; max-width: 100%; } .container { max-width: 80em; margin: 0 auto 2em; padding: 2.5em 5% 3em; background: rgba(255, 255, 255, 0.975); overflow: auto; } h1, h2, h3, h4, h5, h6 { color: #222; padding: .25rem 0 0; } h1 { font-family: AvenirNextCondensed-Medium, -apple-system, BlinkMacSystemFont, "Segoe UI",  Corbel, "Lucida Grande","Trebuchet Ms", sans-serif; padding-top: 0; } h2, h3, h4, h5, dt { font-family: AvenirNextCondensed-DemiBold, -apple-system, BlinkMacSystemFont, "Segoe UI",  Corbel, "Lucida Grande","Trebuchet Ms", sans-serif; } h6, b, strong, thead th, button { font-family: AvenirNext-DemiBold, -apple-system, BlinkMacSystemFont, "Segoe UI",  Corbel, "Lucida Grande","Trebuchet Ms", sans-serif; } em { font-family: AvenirNext-DemiBoldItalic, -apple-system, BlinkMacSystemFont, "Segoe UI",  Corbel, "Lucida Grande","Trebuchet Ms", sans-serif; } i { font-family: AvenirNext-Italic, -apple-system, BlinkMacSystemFont, "Segoe UI", Avenir-Oblique, TrebuchetMS-Italic, "Lucida Grande", Corbel,  "Trebuchet Ms", sans-serif; font-style: italic; } h1 { font-size: 2.5rem; } h2 { font-size: 2.25rem; } h3 { font-size: 2rem; } p { margin: 0; padding: .5em 0; max-width: 38em; } h3 + p, h4 + p { padding-top: 0; } header h1 { text-align: center; } ul { padding: 0 .5em; margin: .5em 0 .5em -.45rem; } .no-bullets { list-style: none; } .no-bullets li { margin: 0 0 1em; padding: 0; } .no-bullets li::before, .no-bullets li:after { content: ""; display: none; } ul li { list-style: none; position: relative; margin-left: -.75em; padding-left: .75em; } ul li::before { content: " \B7"; /* middot in unicode -> &middot; */ font-size: 1.25em; color: #3ca555; line-height: 0; display: inline-block; vertical-align: middle; padding-right: 3px; } .mtxl { margin-top: 9rem; } .github-corner svg { transition: .3s all; } .github-corner:hover svg[style] { fill: #745fb9 !important; }</style>
   </head>
   <body>
     <div id="top" class="container">
       <header>
         <h1>Base4Tone Vim</h1>
       </header>
-
       <main>
-        <article>
-        </article>
-      </main>
+        <h2>Themes for Vim</h2>
+        <p>All colorschemes come in a separate dark and light version.
+        These themes are tested in Gvim, but when using Vim within terminals which <strong>do not</strong> support truecolor, it will use the converted colors from one theme which are as close as possible in the 8-bit 256 colorspace.</p>
+        <h3>Screenshot</h3>
+  <ul class="no-bullets">
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_A_Dark.png" alt="Base4Tone Classic A Dark"/><figcaption>Base4Tone_Classic_A_Dark</figcaption></figure></li>
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_I_Dark.png" alt="Base4Tone Classic I Dark"/><figcaption>Base4Tone_Classic_I_Dark</figcaption></figure></li>
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_R_Dark.png" alt="Base4Tone Classic R Dark"/><figcaption>Base4Tone_Classic_R_Dark</figcaption></figure></li>
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_N_Dark.png" alt="Base4Tone Modern N Dark"/><figcaption>Base4Tone_Modern_N_Dark</figcaption></figure></li>
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_R_Light.png" alt="Base4Tone Classic R Light"/><figcaption>Base4Tone_Classic_R_Light</figcaption></figure></li>
+    <li><figure><img src="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_N_Light.png" alt="Base4Tone Modern N Light"/><figcaption>Base4Tone_Modern_N_Light</figcaption></figure></li>
+  </ul>
+       <details>
+          <summary>All Screenshots</summary>
+          <ul>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_A_Dark.png">Base4Tone_Classic_A_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_B_Dark.png">Base4Tone_Classic_B_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_C_Dark.png">Base4Tone_Classic_C_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_D_Dark.png">Base4Tone_Classic_D_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_E_Dark.png">Base4Tone_Classic_E_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_F_Dark.png">Base4Tone_Classic_F_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_I_Dark.png">Base4Tone_Classic_I_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_L_Dark.png">Base4Tone_Classic_L_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_O_Dark.png">Base4Tone_Classic_O_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_P_Dark.png">Base4Tone_Classic_P_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_Q_Dark.png">Base4Tone_Classic_Q_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_R_Dark.png">Base4Tone_Classic_R_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_S_Dark.png">Base4Tone_Classic_S_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_T_Dark.png">Base4Tone_Classic_T_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_U_Dark.png">Base4Tone_Classic_U_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_W_Dark.png">Base4Tone_Classic_W_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_C_Dark.png">Base4Tone_Modern_C_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_N_Dark.png">Base4Tone_Modern_N_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_W_Dark.png">Base4Tone_Modern_W_Dark</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_A_Light.png">Base4Tone_Classic_A_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_B_Light.png">Base4Tone_Classic_B_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_C_Light.png">Base4Tone_Classic_C_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_D_Light.png">Base4Tone_Classic_D_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_E_Light.png">Base4Tone_Classic_E_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_F_Light.png">Base4Tone_Classic_F_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_I_Light.png">Base4Tone_Classic_I_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_L_Light.png">Base4Tone_Classic_L_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_O_Light.png">Base4Tone_Classic_O_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_P_Light.png">Base4Tone_Classic_P_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_Q_Light.png">Base4Tone_Classic_Q_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_R_Light.png">Base4Tone_Classic_R_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_S_Light.png">Base4Tone_Classic_S_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_T_Light.png">Base4Tone_Classic_T_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_U_Light.png">Base4Tone_Classic_U_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Classic_W_Light.png">Base4Tone_Classic_W_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_C_Light.png">Base4Tone_Modern_C_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_N_Light.png">Base4Tone_Modern_N_Light</a></li>
+            <li><a href="https://atelierbram.github.io/Base4Tone-vim/img/Base4Tone_Modern_W_Light.png">Base4Tone_Modern_W_Light</a></li>
+          </ul>
+        </details>
+<h3>Activate Base4Tone color theme</h3>
+<p>in .vimrc file:</p>
+<pre><code class="language-vim">
+" dark
+set background=dark
+colorscheme Base4Tone_Classic_A_Dark
+" or any of the other themes:
+" colorscheme Base4Tone_Classic_B_Dark
+" colorscheme Base4Tone_Classic_C_Dark
+" colorscheme Base4Tone_Classic_D_Dark
+" colorscheme Base4Tone_Classic_E_Dark
+" colorscheme Base4Tone_Classic_F_Dark
+" colorscheme Base4Tone_Classic_I_Dark
+" colorscheme Base4Tone_Classic_L_Dark
+" colorscheme Base4Tone_Classic_O_Dark
+" colorscheme Base4Tone_Classic_P_Dark
+" colorscheme Base4Tone_Classic_Q_Dark
+" colorscheme Base4Tone_Classic_R_Dark
+" colorscheme Base4Tone_Classic_S_Dark
+" colorscheme Base4Tone_Classic_T_Dark
+" colorscheme Base4Tone_Classic_U_Dark
+" colorscheme Base4Tone_Classic_W_Dark
+" colorscheme Base4Tone_Modern_C_Dark
+" colorscheme Base4Tone_Modern_N_Dark
+" colorscheme Base4Tone_Modern_W_Dark
+</code></pre>
+<pre><code class="language-vim">
+" light
+" set background=light
+" colorscheme Base4Tone_Classic_A_Light
+" colorscheme Base4Tone_Classic_B_Light
+" colorscheme Base4Tone_Classic_C_Light
+" colorscheme Base4Tone_Classic_D_Light
+" colorscheme Base4Tone_Classic_E_Light
+" colorscheme Base4Tone_Classic_F_Light
+" colorscheme Base4Tone_Classic_I_Light
+" colorscheme Base4Tone_Classic_L_Light
+" colorscheme Base4Tone_Classic_O_Light
+" colorscheme Base4Tone_Classic_P_Light
+" colorscheme Base4Tone_Classic_Q_Light
+" colorscheme Base4Tone_Classic_R_Light
+" colorscheme Base4Tone_Classic_S_Light
+" colorscheme Base4Tone_Classic_T_Light
+" colorscheme Base4Tone_Classic_U_Light
+" colorscheme Base4Tone_Classic_W_Light
+" colorscheme Base4Tone_Modern_C_Light
+" colorscheme Base4Tone_Modern_N_Light
+" colorscheme Base4Tone_Modern_W_Light
+</code></pre>
+<h3>Optional <a href="https://github.com/vim-airline/vim-airline">Airline</a> support with Base4Tone colortheme</h3>
+<pre><code class="language-vim">
+" Airline for Base4Tone
+" Dark
+" let g:airline_theme='Base4Tone_Classic_A_Dark'
+" let g:airline_theme='Base4Tone_Classic_B_Dark'
+" let g:airline_theme='Base4Tone_Classic_C_Dark'
+" let g:airline_theme='Base4Tone_Classic_D_Dark'
+" let g:airline_theme='Base4Tone_Classic_E_Dark'
+" let g:airline_theme='Base4Tone_Classic_F_Dark'
+" let g:airline_theme='Base4Tone_Classic_I_Dark'
+" let g:airline_theme='Base4Tone_Classic_L_Dark'
+" let g:airline_theme='Base4Tone_Classic_O_Dark'
+" let g:airline_theme='Base4Tone_Classic_P_Dark'
+" let g:airline_theme='Base4Tone_Classic_Q_Dark'
+" let g:airline_theme='Base4Tone_Classic_R_Dark'
+" let g:airline_theme='Base4Tone_Classic_S_Dark'
+" let g:airline_theme='Base4Tone_Classic_T_Dark'
+" let g:airline_theme='Base4Tone_Classic_U_Dark'
+" let g:airline_theme='Base4Tone_Classic_W_Dark'
+" let g:airline_theme='Base4Tone_Modern_C_Dark'
+" let g:airline_theme='Base4Tone_Modern_N_Dark'
+" let g:airline_theme='Base4Tone_Modern_W_Dark'
 
-
-      <footer class="site-footer">
+" Light
+" let g:airline_theme='Base4Tone_Classic_A_Light'
+" let g:airline_theme='Base4Tone_Classic_B_Light'
+" let g:airline_theme='Base4Tone_Classic_C_Light'
+" let g:airline_theme='Base4Tone_Classic_D_Light'
+" let g:airline_theme='Base4Tone_Classic_E_Light'
+" let g:airline_theme='Base4Tone_Classic_F_Light'
+" let g:airline_theme='Base4Tone_Classic_I_Light'
+" let g:airline_theme='Base4Tone_Classic_L_Light'
+" let g:airline_theme='Base4Tone_Classic_O_Light'
+" let g:airline_theme='Base4Tone_Classic_P_Light'
+" let g:airline_theme='Base4Tone_Classic_Q_Light'
+" let g:airline_theme='Base4Tone_Classic_R_Light'
+" let g:airline_theme='Base4Tone_Classic_S_Light'
+" let g:airline_theme='Base4Tone_Classic_T_Light'
+" let g:airline_theme='Base4Tone_Classic_U_Light'
+" let g:airline_theme='Base4Tone_Classic_W_Light'
+" let g:airline_theme='Base4Tone_Modern_C_Light'
+" let g:airline_theme='Base4Tone_Modern_N_Light'
+" let g:airline_theme='Base4Tone_Modern_W_Light'
+</code></pre>
+<h3>Optional <a href="https://github.com/itchyny/lightline.vim">Lightline</a> support with Base4Tone colortheme</h3>
+<pre><code class="language-vim">
+" lightline {{{
+set noshowmode
+let g:lightline = {
+\ 'colorscheme': 'Base4Tone_Modern_N_Dark',
+\ }
+" or any of the other colorschemes
+" template is smart and detects light or dark colorscheme being used; uses the corresponding light of dark version accordingly
+" }}}
+</code></pre>
+</main>
+      <footer class="site-footer mtxl">
         <small class="colophon">Made by <a href="http://atelierbramdehaan.nl/">Atelier Bram de Haan</a>, on <a href="http://github.com/atelierbram/">GitHub</a>.</small>
-      </footer>
+      </footer><a href="https://github.com/atelierbram/Base4Tone-vim" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#2a2734;color:#fff;position:absolute;top:0;border:0;right:0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
     </div>
-
+    <script src="js/vendor/prism.js"></script>
   </body>
 </html>
