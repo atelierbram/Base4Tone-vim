@@ -61,7 +61,6 @@ Hi NonText      #83856f NONE 243
 Hi Normal       #fcffe6 #21211c 015 234 
 Hi LineNr       #57594a #2c2c25  239 235  
 Hi SignColumn   #37382e #787a66 236 242 
-Hi Cursor       #0d0d07 #877d6e 000 036 
 Hi NonText      #83856f NONE 243 
 Hi Normal       #fcffe6 #21211c 015 234 
 Hi LineNr       #57594a #2c2c25  239 235  

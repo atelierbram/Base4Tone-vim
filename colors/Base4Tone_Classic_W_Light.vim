@@ -56,22 +56,22 @@ Hi Scrollbar    #f8f6f9 #be31d3 015 106
 Hi Tooltip      #f8f6f9 #be31d3 015 106
 Hi Title        #932d1f NONE 020 NONE NONE 
 Hi Conceal      #d5880b #e4dde0 069 253 
-Hi Cursor       #f9f6f7 #938994 015 245 
+Hi Cursor       #f9f6f7 #b2a8b3 015 248 
 Hi NonText      #94898d NONE 245 
-Hi Normal       #15040b #e4dde0 000 253 
-Hi LineNr       #bdb3b6 #dad2d5  249 252  
+Hi Normal       #15040b #ede8ea 000 254 
+Hi LineNr       #bdb3b6 #e4dde0  249 253  
 Hi SignColumn   #d1c7cb #9e9498 251 246 
-Hi StatusLine   #b2a9ac #ede8ea 248 254 NONE NONE 
+Hi StatusLine   #b2a9ac #e4dde0 248 253 NONE NONE 
 Hi StatusLineNC #9e9498 #dad2d5 246 252 NONE NONE 
-Hi VertSplit    #e4dde0 #e4dde0 253 253 
+Hi VertSplit    #ede8ea #ede8ea 254 254 
 Hi CursorColumn NONE #403a3c NONE 237 NONE NONE 
-Hi CursorLine   NONE #dad2d5 NONE 252 NONE NONE 
-Hi CursorLineNr #94898d #c7bdc1 245 250 
-Hi PMenu        #766b6f #c7bdc1 242 250 
-Hi PMenuSel     #c7bdc1 #766b6f 250 242 
-Hi TabLine      #94898d #c7bdc1 245 250 
-Hi TabLineFill  #94898d #c7bdc1 245 250 
-Hi TabLineSel   #d22d6c #c7bdc1 036 250 
+Hi CursorLine   NONE #e4dde0 NONE 253 NONE NONE 
+Hi CursorLineNr #a89fa2 #dad2d5 247 252 
+Hi PMenu        #766b6f #e4dde0 242 253 
+Hi PMenuSel     #c7bdc1 #e4dde0 250 253 
+Hi TabLine      #94898d #e4dde0 245 253 
+Hi TabLineFill  #94898d #e4dde0 245 253 
+Hi TabLineSel   #d22d6c #e4dde0 036 253 
 
 " Standard syntax highlighting 
 Hi Boolean      #bd3a28 NONE 021 
