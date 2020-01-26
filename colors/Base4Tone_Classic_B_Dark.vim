@@ -38,7 +38,7 @@ Hi FoldColumn   #b8a10a #433c38 045 237
 Hi Folded       #85776f #433c38 243 237 
 Hi IncSearch    #f5ada3 #7a251a 191 058 
 Hi Macro        #95dc18 NONE 147 
-Hi MatchParen   #211e1c #85776f 234 243 
+Hi MatchParen   #ee9968 #4d4342 048 238 
 Hi ModeMsg      #e47b3f NONE 042 
 Hi MoreMsg      #e47b3f NONE 042 
 Hi Question     #609504 NONE 063 
@@ -56,7 +56,7 @@ Hi Scrollbar    #0d0807 #e76655 000 142
 Hi Tooltip      #0d0807 #e76655 000 142
 Hi Title        #dcc218 NONE 051 NONE NONE 
 Hi Conceal      #609504 #211e1c 063 234 
-Hi Cursor       #0d0907 #847371 000 243 
+Hi Cursor       #261308 #847371 000 243 
 Hi NonText      #85776f NONE 243 
 Hi Normal       #ffefe6 #211e1c 015 234 
 Hi LineNr       #59504a #2c2825  239 235  
